@@ -1,7 +1,5 @@
-
-
-angular.module('userApp', ['appRoute'])
+angular.module('userApp', ['appRoutes', 'userControllers', 'userServices'])
 
 .config(function() {
-  console.log('testing user application');
+  console.log('testing user app')
 });
