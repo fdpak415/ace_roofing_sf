@@ -17,6 +17,10 @@ UserSchema.pre('save', function(next) {
   });
 });
 
+UserSchema.methods.comparePassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
+
 bcrypt.hash("bacon", null, null, function(err, hash) {
     // Store hash in your password DB.
 });
