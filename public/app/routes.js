@@ -21,6 +21,10 @@ angular.module('appRoutes', ['ngRoute'])
     templateUrl: 'app/views/pages/about.html'
   })
 
+  .when('/request', {
+    templateUrl: 'app/views/pages/request.html'
+  })
+
   .otherwise({ redirectTo: '/'});
 
   $locationProvider.html5Mode({
