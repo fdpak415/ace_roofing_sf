@@ -7,22 +7,22 @@ angular.module('appRoutes', ['ngRoute'])
     templateUrl: 'app/views/pages/home.html'
   })
 
-  .when('/about', {
-    templateUrl: 'app/views/pages/about.html'
+  .when('/projects', {
+    templateUrl: 'app/views/pages/projects.html'
   })
 
-  .when('/register', {
-    templateUrl: 'app/views/pages/users/register.html',
+  .when('/services', {
+    templateUrl: 'app/views/pages/services.html',
     controller: 'regCtrl',
     controllerAs: 'register'
   })
 
-  .when('/login', {
-    templateUrl: 'app/views/pages/users/login.html'
+  .when('/about', {
+    templateUrl: 'app/views/pages/about.html'
   })
 
-  .when('/logout', {
-    templateUrl: 'app/views/pages/users/logout.html'
+  .when('/request', {
+    templateUrl: 'app/views/pages/request.html'
   })
 
   .otherwise({ redirectTo: '/'});
