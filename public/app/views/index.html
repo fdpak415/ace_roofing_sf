@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/scss" href="app/assets/css/style.scss">
     <link rel="stylesheet" type="text/css" href="app/assets/css/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link href="https://fonts.googleapis.com/css?family=Chivo|Work+Sans" rel="stylesheet">
 
     <!-- MAIN ANGULAR FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -21,11 +23,10 @@
 
     <!-- ANGULAR CONFIG/ROUTES -->
     <script src="app/app.js"></script>
-    <script src="app/routes.js"></script>
 
   </head>
 
-  <body ng-app="userApp">
+  <body ng-app="userApp" ng-controller="ScrollController">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -41,20 +42,29 @@
 
           <a class="navbar-brand" href="#">AceRoofingSF</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/request">Request a Quote</a></li>
+        <div id="navbar"  class="navbar-collapse collapse">
+          <ul class="nav navbar-nav" >
+            <li class="active"><a  ng-click="scrollTo('/')">Home</a></li>
+            <li><a  ng-click="scrollTo('projects')">Projects</a></li>
+            <li><a  ng-click="scrollTo('services')">Services</a></li>
+            <li><a  ng-click="scrollTo('about')">About Us</a></li>
+            <li><a  ng-click="scrollTo('request')">Request a Quote</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
 
-    <div ng-view style="width:100%"></div>
+    <div ng-view style="width:100%">
+      <div id="/" ng-include="'app/views/pages/home.html'"></div>
 
+      <div id="projects" ng-include="'app/views/pages/projects.html'"></div>
+
+      <div id="services" ng-include="'app/views/pages/services.html'"></div>
+
+      <div id="about" ng-include="'app/views/pages/about.html'"></div>
+
+      <div id="request" ng-include="'app/views/pages/request.html'"></div>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
