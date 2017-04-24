@@ -14,12 +14,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/scss" href="app/assets/css/style.scss">
     <link rel="stylesheet" type="text/css" href="app/assets/css/home.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/reviews.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/services.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
     <link href="https://fonts.googleapis.com/css?family=Chivo|Work+Sans" rel="stylesheet">
 
     <!-- MAIN ANGULAR FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js.map"></script>
 
     <!-- ANGULAR CONFIG/ROUTES -->
     <script src="app/app.js"></script>
@@ -44,11 +49,11 @@
         </div>
         <div id="navbar"  class="navbar-collapse collapse">
           <ul class="nav navbar-nav" >
-            <li class="active"><a  ng-click="scrollTo('/')">Home</a></li>
-            <li><a  ng-click="scrollTo('projects')">Projects</a></li>
-            <li><a  ng-click="scrollTo('services')">Services</a></li>
-            <li><a  ng-click="scrollTo('about')">About Us</a></li>
-            <li><a  ng-click="scrollTo('request')">Request a Quote</a></li>
+            <li class="active"><a  href="#/" du-smooth-scroll du-scrollspy>Home</a></li>
+            <li><a  href="#reviews" du-smooth-scroll du-scrollspy>Reviews</a></li>
+            <li><a  href="#services" du-smooth-scroll du-scrollspy>Services</a></li>
+            <li><a  href="#about" du-smooth-scroll du-scrollspy>About Us</a></li>
+            <li><a  href="#request" du-smooth-scroll du-scrollspy>Request a Quote</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -57,7 +62,17 @@
     <div ng-view style="width:100%">
       <div id="/" ng-include="'app/views/pages/home.html'"></div>
 
-      <div id="projects" ng-include="'app/views/pages/projects.html'"></div>
+      <div class="reviews-section">
+        <div id="reviews" ng-include="'app/views/pages/reviews.html'"></div>
+
+        <span class="yelp-review" data-review-id="2Io2HZiyuULWDPQPe4S-Kw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=HsBs3oVeR-Vzs0ULVH8Khg" rel="nofollow noopener">Royce B.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=2Io2HZiyuULWDPQPe4S-Kw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+
+        <span class="yelp-review" data-review-id="LaLf2T55w2iyVYSnTYmbbA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=K1b8APNqrmIW9ebcsQbXyA" rel="nofollow noopener">Kaytee D.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=LaLf2T55w2iyVYSnTYmbbA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+
+        <span class="yelp-review" data-review-id="fXQ82VxDOBdN-BPYpqK69A" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=aCYK-anx7FLsGhntkEoUPA" rel="nofollow noopener">jenn a.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=fXQ82VxDOBdN-BPYpqK69A" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+        <br>
+        <br>
+      </div>
 
       <div id="services" ng-include="'app/views/pages/services.html'"></div>
 
