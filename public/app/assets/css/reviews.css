@@ -1,0 +1,14 @@
+.reviews-section {
+background-color: #e6ffe6;
+}
+
+.page-header h1 {
+  font-size: 3.5em;
+}
+
+.yelp-review {
+  margin: 0 auto;
+  display: none;
+  text-align: center;
+  margin-bottom: 10px;
+}

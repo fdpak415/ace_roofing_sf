@@ -48,14 +48,14 @@ font-family: 'Chivo', sans-serif;
 
 /*---BACKGROUND---*/
 .jumbotron {
-  height: 600px;
+  height: 550px;
 }
 
 .parallax {
   background: url(../images/roof.png) repeat fixed 100%;
   background-size: cover;
   width: 100%;
-  height: 600px;
+  height: 550px;
   opacity: .5;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
@@ -90,13 +90,16 @@ h2 {
   margin-top: 40px;
 }
 
-.thumbnail {
+.logo {
   width: 360px;
   margin: auto;
-  display: block;
 }
 
 .col-centered{
   float: none;
   margin: 0 auto;
+}
+
+.home-text {
+  margin: 40px;
 }
