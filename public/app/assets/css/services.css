@@ -8,17 +8,31 @@
 }
 
 .thumbnail {
-  width: 500px;
-  height: 550px;
-  text-align: center;
-  float: left;
+  width: 400px;
+  height: 650px;
   margin: 20px;
-  position: relative;
-  left: 19%;
+  display: inline-block !important;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: top;
+
 }
 
 .thumbnail img {
-  width: 470px;
+  width: 370px;
   height: 300px;
   margin: 10px;
+}
+
+.caption {
+  padding: 0px !important;
+}
+
+.row {
+  text-align: center;
+
+}
+
+.col-md-12 {
+  display: inline-block;
 }
