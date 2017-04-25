@@ -16,10 +16,13 @@
     <link rel="stylesheet" type="text/css" href="app/assets/css/home.css">
     <link rel="stylesheet" type="text/css" href="app/assets/css/reviews.css">
     <link rel="stylesheet" type="text/css" href="app/assets/css/services.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/projects.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/css/request.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
     <link href="https://fonts.googleapis.com/css?family=Chivo|Work+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
 
-    <!-- MAIN ANGULAR FILES -->
+ <!-- MAIN ANGULAR FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.js"></script>
@@ -28,6 +31,8 @@
 
     <!-- ANGULAR CONFIG/ROUTES -->
     <script src="app/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKSEAM2-YluyU43woVCTdUvIvXZTfAZkk=initMap"
+type="text/javascript"></script>
 
   </head>
 
@@ -52,7 +57,11 @@
             <li class="active"><a  href="#/" du-smooth-scroll du-scrollspy>Home</a></li>
             <li><a  href="#reviews" du-smooth-scroll du-scrollspy>Reviews</a></li>
             <li><a  href="#services" du-smooth-scroll du-scrollspy>Services</a></li>
+<<<<<<< HEAD
             <li><a  href="#projects" du-smooth-scroll du-scrollspy>Recent Projects</a></li>
+=======
+            <li><a  href="#projects" du-smooth-scroll du-scrollspy>Projects</a></li>
+>>>>>>> cd8ec32df0f52989fb4049602cb304e30fab8212
             <li><a  href="#request" du-smooth-scroll du-scrollspy>Request a Quote</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -76,9 +85,14 @@
 
       <div id="services" ng-include="'app/views/pages/services.html'"></div>
 
+<<<<<<< HEAD
       <div id="about" ng-include="'app/views/pages/projects.html'"></div>
+=======
+      <div id="projects" ng-include="'app/views/pages/projects.html'"></div>
+>>>>>>> cd8ec32df0f52989fb4049602cb304e30fab8212
 
       <div id="request" ng-include="'app/views/pages/request.html'"></div>
+
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

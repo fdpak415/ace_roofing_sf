@@ -23,6 +23,7 @@
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.5",
     "morgan": "^1.8.1",
+    "ngmap": "^1.18.4",
     "widgets": "^0.3.4"
   }
 }
