@@ -78,9 +78,10 @@ h1 {
 h2 {
   font-size: 2em;
   margin: 5px;
+  padding: 10px;
 }
 
-.call-message {
+.age {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -95,6 +96,11 @@ h2 {
   margin: auto;
 }
 
+.call-message {
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
 .col-centered{
   float: none;
   margin: 0 auto;
@@ -102,4 +108,10 @@ h2 {
 
 .home-text {
   margin: 40px;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
 }
