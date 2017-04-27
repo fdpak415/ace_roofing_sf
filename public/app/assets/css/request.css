@@ -2,19 +2,21 @@
 #map {
   height: 500px;
   width: 500px;
+  float: right;
+  background: lightblue;
 
 }
 
 .request-div {
-  display: flex;
 }
 
 #id {
   float: left;
   background: lightgreen;
+  width: calc(100% - 550px);
+
 }
 
 #map {
-  float: left;
-  background: lightblue;
+
 }
