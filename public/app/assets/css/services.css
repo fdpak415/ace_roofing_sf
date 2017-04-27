@@ -14,9 +14,13 @@
   margin: 20px;
   display: inline-block !important;
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   vertical-align: top;
+}
 
+.thumbnail h3 {
+  text-align: center;
+  
 }
 
 .thumbnail img {

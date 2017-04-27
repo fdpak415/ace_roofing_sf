@@ -1,1 +1,20 @@
 
+#map {
+  height: 500px;
+  width: 500px;
+
+}
+
+.request-div {
+  display: flex;
+}
+
+#id {
+  float: left;
+  background: lightgreen;
+}
+
+#map {
+  float: left;
+  background: lightblue;
+}

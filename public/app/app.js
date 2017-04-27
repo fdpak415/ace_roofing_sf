@@ -1,4 +1,4 @@
-angular.module('userApp', ['duScroll'])
+angular.module('userApp', ['duScroll', 'ngMap'])
   // .controller('ScrollController', function($scope, $location, $anchorScroll) {
   //     $scope.scrollTo = function(scrollLocation) {
   //       $location.hash(scrollLocation);
@@ -14,3 +14,5 @@ angular.module('userApp', ['duScroll'])
       }
     }
   ).value('duScrollOffset', 30);
+
+    
