@@ -39,7 +39,7 @@
         function initMap() {
           map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 37.7430404, lng: -122.435135},
-            zoom: 12
+            zoom: 11
           });
 
           var marker = new google.maps.Marker({
@@ -48,14 +48,6 @@
           title: 'Ace Roofing SF',
           url: 'https://www.google.com/maps/place/Ace+Roofing+Inc./@37.7236016,-122.3886265,16z/data=!4m8!1m2!2m1!1sace+sf+roofing+san+francisco!3m4!1s0x0:0x68456bfa6a187108!8m2!3d37.7251821!4d-122.3881929'
         });
-
-        map.addListener('center_changed', function() {
-        // 3 seconds after the center of the map has changed, pan back to the
-        // marker.
-        window.setTimeout(function() {
-          map.panTo(marker.getPosition());
-        }, 3000);
-      });
 
         marker.addListener('click', function() {
           window.open (this.url);
@@ -91,7 +83,7 @@
 
             <li><a  href="#projects" du-smooth-scroll du-scrollspy>Recent Projects</a></li>
 
-            <li><a  href="#request" du-smooth-scroll du-scrollspy>Request a Quote</a></li>
+            <li><a  href="#contact" du-smooth-scroll du-scrollspy>Contact Us</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -116,10 +108,28 @@
 
       <div id="projects" ng-include="'app/views/pages/projects.html'"></div>
 
-      <div class="request-div">
-        <div id="request" ng-include="'app/views/pages/request.html'"></div><br>
-        <div id="map"></div>
+      <div id="contact" class="page-header request-header">
+        <h1>Contact Us</h1>
       </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-centered">
+            <div  ng-include="'app/views/pages/request.html'"></div><br>
+            <div class="company-contact">
+              <p>Address: <br>
+                1420 Yosemite Ave, <br>
+                San Francisco, CA 94124 <br>
+                (415) 407-2242</p>
+              <div id="map"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
 
     </div>
     <!-- Bootstrap core JavaScript

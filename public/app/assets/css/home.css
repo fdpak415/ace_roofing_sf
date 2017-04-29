@@ -86,13 +86,13 @@ h2 {
   padding-bottom: 20px;
 }
 
-#home-logo {
+#logo {
   display: block;
   margin-top: 40px;
 }
 
-.logo {
-  width: 360px;
+#logo {
+  width: 330px;
   margin: auto;
 }
 
@@ -109,12 +109,6 @@ h2 {
 .home-text {
   margin: 40px;
   line-height: 48px;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 .clearfix:after {
