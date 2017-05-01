@@ -9,15 +9,16 @@ font-family: 'Raleway', sans-serif;
 .ng-scope {
   width: calc(100% - 5px);
   height: calc(100% - 5px);
-
 }
 
 /*---NAVBAR---*/
-
-.navbar-brand {
-
+.navbar-brand > img {
+  height: 50px;
+  width: 200px;
+  left: 15px;
+  bottom: 14.5px;
+  position: relative;
 }
-
 .navbar .nav {
     margin: 0;
     width: 80%;
@@ -34,6 +35,7 @@ font-family: 'Raleway', sans-serif;
     text-align: center;
     border-left: 1px solid rgba(255, 255, 255, .75);
     border-right: 1px solid rgba(0, 0, 0, .1);
+    font-size: 18px;
 }
 
 .navbar .nav li:first-child a {
@@ -70,9 +72,9 @@ font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-size: 4.5em;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-size: 5em;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
 h2 {
@@ -81,24 +83,17 @@ h2 {
   padding: 10px;
 }
 
-.age {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#home-logo {
-  display: block;
-  margin-top: 40px;
-}
-
-.logo {
-  width: 360px;
+#logo {
+  width: 330px;
   margin: auto;
 }
 
 .call-message {
+  margin-top: 48px;
+}
+
+#home-logo button {
   margin-top: 20px;
-  padding-top: 20px;
 }
 
 .col-centered{
@@ -107,14 +102,8 @@ h2 {
 }
 
 .home-text {
-  margin: 40px;
+  margin: 100px;
   line-height: 48px;
-}
-
-.clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
 }
 
 .clearfix:after {

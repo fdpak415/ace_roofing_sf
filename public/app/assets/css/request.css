@@ -1,22 +1,51 @@
 
-#map {
-  height: 500px;
-  width: 500px;
+.company-contact {
+  text-align: center;
   float: right;
-  background: lightblue;
-
 }
 
-.request-div {
+.company-contact p {
+  font-size: 24px;
 }
-
-#id {
-  float: left;
-  background: lightgreen;
-  width: calc(100% - 550px);
-
-}
-
 #map {
+  height: 400px;
+  width: 400px;
 
+}
+
+.input-group {
+  font-size: 20px;
+}
+
+.input-group input {
+  margin: 7px;
+  width: 200px;
+}
+
+.input-group textarea {
+  margin-top: 20px;
+  margin-left: 7px;
+  width: 100%;
+}
+
+#address-input {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#address-input:last-of-type {
+  margin-bottom: 30px;
+}
+
+form {
+  float: left;
+  width: 40% !important;
+  text-align: left;
+  background-color: #ccffcc;
+  padding: 20px;
+}
+
+form > h2 {
+  text-align: center;
+  margin: 20px;
 }
