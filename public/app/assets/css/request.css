@@ -41,6 +41,8 @@ form {
   float: left;
   width: 40% !important;
   text-align: left;
+  background-color: #ccffcc;
+  padding: 20px;
 }
 
 form > h2 {

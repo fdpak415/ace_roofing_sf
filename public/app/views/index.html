@@ -34,6 +34,8 @@
     <!-- ANGULAR CONFIG/ROUTES -->
     <script src="app/app.js"></script>
     <script src="app/controllers/mapCtrl.js"></script>
+    <script src="app/controllers/quoteCtrl.js"></script>
+
     <script>
         var map;
         function initMap() {
@@ -60,7 +62,7 @@
   <body ng-app="userApp">
 
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="custom-navbar" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -71,7 +73,7 @@
           </button>
 
 
-          <a class="navbar-brand" href="#">AceRoofingSF</a>
+          <a class="navbar-brand" href="#"><img src="app/assets/images/logo.png" alt=""></a>
         </div>
         <div id="navbar"  class="navbar-collapse collapse">
           <ul class="nav navbar-nav" >

@@ -1,5 +1,5 @@
 .reviews-section {
-background-color: #e6ffe6;
+background-color: #ccffcc;
 }
 
 .page-header h1 {
@@ -11,4 +11,12 @@ background-color: #e6ffe6;
   display: none;
   text-align: center;
   margin-bottom: 10px;
+  font-size: 3em !important;
+}
+.yelp-review:last-of-type{
+  margin-bottom: 80px;
+}
+
+.u-horizontal-scrollbar:last-of-type{
+
 }

@@ -1,40 +1,40 @@
 
 
-  <form>
+  <form ng-submit="regQuote(regData);" ng-controller="quoteCtrl" >
   <!-- NAME -->
     <h2>Request a Free Quote</h2>
     <div class="input-group">
       <label>Name:</label><br>
-      <input type="text" class="form-name" placeholder="John" >
-      <input type="text" class="form-name" placeholder="Doe" >
+      <input name="firstname" type="text" class="form-name" placeholder="John" ng-model="regData.firstname">
+      <input name="lastname" type="text" class="form-name" placeholder="Doe" ng-model="regData.lastname">
     </div>
 
   <br>
   <!-- EMAIL -->
   <div class="input-group">
     <label>Email:</label><br>
-    <input type="text" name="email" placeholder="example@gmail.com" value="">
+    <input type="text" name="email" placeholder="example@gmail.com" ng-model="regData.email">
   </div>
   <br>
   <!-- PHONE -->
   <div class="input-group">
     <label>Phone:</label><br>
-    <input type="text" name="phone" placeholder="xxx-xxx-xxxx" value="">
+    <input type="text" name="phone" placeholder="xxx-xxx-xxxx" ng-model="regData.phone">
   </div>
   <br>
   <!-- ADDRESS -->
   <div class="input-group">
     <label>Address:</label><br>
-    <input id="address-input"type="text" name="address1" placeholder="Address 1" value=""><br>
-    <input id="address-input" type="text" name="address2" placeholder="Address 2" value=""><br>
-    <input id="address-input" type="text" name="city" placeholder="San Francisco" value="">
-    <input id="address-input" type="text" name="state" placeholder="CA" value="">
-    <input id="address-input" type="text" name="zip" placeholder="94124" value="">
+    <input id="address-input" type="text" name="address1" placeholder="Address 1" ng-model="regData.address1"><br>
+    <input id="address-input" type="text" name="address2" placeholder="Address 2" ng-model="regData.address2"><br>
+    <input id="address-input" type="text" name="city" placeholder="San Francisco" ng-model="regData.city">
+    <input id="address-input" type="text" name="state" placeholder="CA" ng-model="regData.state">
+    <input id="address-input" type="text" name="zip" placeholder="94124" ng-model="regData.zip">
   </div>
   <!-- DESCRIPTION -->
   <div class="input-group">
     <label>Project Description:</label><br>
-    <textarea name="description" rows="8" cols="80" placeholder="Project Description"></textarea>
+    <textarea name="description" rows="8" cols="80" placeholder="Project Description" ng-model="regData.description"></textarea>
   </div>
   <br>
   <!-- SUBMIT -->

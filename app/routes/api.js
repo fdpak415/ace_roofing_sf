@@ -1,12 +1,13 @@
-var User = require('../models/user');
+var Quote = require('../models/quote');
 var jwt = require('jsonwebtoken');
 var secret = 'harrypotter';
 
 module.exports = function(router) {
   //USER REGISTRATION ROUTE
-  router.post('/users', function(req, res) {
-    var user = new User();
-    user.username = req.body.username;
+  router.post('/quote', function(req, res) {
+    var quote = new Quote();
+    quote.firstname = req.body.firstname;
+    quote.lastname = req.body.lastname;
     user.password = req.body.password;
     user.email = req.body.email;
     if (req.body.username == null || req.body.username == '' ||
@@ -69,6 +70,6 @@ module.exports = function(router) {
   router.post('/me', function(req, res) {
     res.send(req.decoded);
   });
-  
+
   return router;
 }
