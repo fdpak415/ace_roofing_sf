@@ -6,6 +6,7 @@
 .col-xs-6 {
   padding: 0;
 }
+
 .company-contact {
   text-align: center;
   float: left;
@@ -25,7 +26,7 @@
 
 #map {
   position: relative;
-  width: 500px;
+  width: 600px;
   height: 500px;
   margin: auto;
   margin-top: 50px;
