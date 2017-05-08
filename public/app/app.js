@@ -1,4 +1,4 @@
-angular.module('userApp', ['duScroll', 'ngMap', 'quoteControllers'])
+angular.module('userApp', ['duScroll', 'ngMap', 'quoteControllers', 'quoteServices'])
   // .controller('ScrollController', function($scope, $location, $anchorScroll) {
   //     $scope.scrollTo = function(scrollLocation) {
   //       $location.hash(scrollLocation);
