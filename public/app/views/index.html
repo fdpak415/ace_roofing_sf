@@ -35,6 +35,7 @@
     <script src="app/app.js"></script>
     <script src="app/controllers/mapCtrl.js"></script>
     <script src="app/controllers/quoteCtrl.js"></script>
+    <script src="app/services/quoteServices.js"></script>
 
     <script>
         var map;
@@ -114,18 +115,21 @@
         <h1>Contact Us</h1>
       </div>
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-centered">
-            <div  ng-include="'app/views/pages/request.html'"></div><br>
-            <div class="company-contact">
-              <p>Address: <br>
-                1420 Yosemite Ave, <br>
-                San Francisco, CA 94124 <br>
-                (415) 407-2242</p>
-              <div id="map"></div>
+            <div class="col-xs-6">
+              <div  ng-include="'app/views/pages/request.html'"></div><br>
             </div>
-
+            <div class="col-xs-6">
+              <div class="company-contact">
+                <h2>Address:</h2> <br>
+                  <p>1420 Yosemite Ave, <br>
+                  San Francisco, CA 94124 <br>
+                  (415) 407-2242</p>
+                <div id="map"></div>
+            </div>
+            </div>
           </div>
         </div>
       </div>

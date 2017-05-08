@@ -5,8 +5,8 @@
     <h2>Request a Free Quote</h2>
     <div class="input-group">
       <label>Name:</label><br>
-      <input name="firstname" type="text" class="form-name" placeholder="John" ng-model="regData.firstname">
-      <input name="lastname" type="text" class="form-name" placeholder="Doe" ng-model="regData.lastname">
+      <input id="input-name" name="firstname" type="text" class="form-name" placeholder="John" ng-model="regData.firstname">
+      <input id="input-name" name="lastname" type="text" class="form-name" placeholder="Doe" ng-model="regData.lastname">
     </div>
 
   <br>
@@ -27,9 +27,9 @@
     <label>Address:</label><br>
     <input id="address-input" type="text" name="address1" placeholder="Address 1" ng-model="regData.address1"><br>
     <input id="address-input" type="text" name="address2" placeholder="Address 2" ng-model="regData.address2"><br>
-    <input id="address-input" type="text" name="city" placeholder="San Francisco" ng-model="regData.city">
-    <input id="address-input" type="text" name="state" placeholder="CA" ng-model="regData.state">
-    <input id="address-input" type="text" name="zip" placeholder="94124" ng-model="regData.zip">
+    <input class="city" id="address-input" type="text" name="city" placeholder="San Francisco" ng-model="regData.city">
+    <input class="state" id="address-input" type="text" name="state" placeholder="CA" ng-model="regData.state">
+    <input class="zip" id="address-input" type="text" name="zip" placeholder="94124" ng-model="regData.zip">
   </div>
   <!-- DESCRIPTION -->
   <div class="input-group">

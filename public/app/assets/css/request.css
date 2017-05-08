@@ -1,31 +1,57 @@
 
+.container-fluid {
+  padding: 0;
+}
+
+.col-xs-6 {
+  padding: 0;
+}
 .company-contact {
   text-align: center;
-  float: right;
+  float: left;
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
 }
 
 .company-contact p {
   font-size: 24px;
 }
-#map {
-  height: 400px;
-  width: 400px;
 
+.company-contact h2 {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+#map {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  margin-top: 50px;
 }
 
 .input-group {
   font-size: 20px;
+  width: 100%;
+  text-align: left;
 }
 
 .input-group input {
   margin: 7px;
-  width: 200px;
+  width: 90%;
+  border: 3px solid black;
 }
 
 .input-group textarea {
   margin-top: 20px;
   margin-left: 7px;
-  width: 100%;
+  width: 90%;
+  border: 3px solid black;
+}
+
+#input-name {
+  width: 44%;
 }
 
 #address-input {
@@ -33,14 +59,30 @@
   margin-bottom: 15px;
 }
 
+#address-input:first-of-type {
+  margin-top: 7px;
+}
+
 #address-input:last-of-type {
   margin-bottom: 30px;
 }
 
+.city {
+  width: 45% !important;
+}
+
+.state {
+  width: 15% !important;
+}
+
+.zip {
+  width: 26% !important;
+}
+
 form {
   float: left;
-  width: 40% !important;
-  text-align: left;
+  width: 500px; !important;
+  text-align: center;
   background-color: #ccffcc;
   padding: 20px;
 }
@@ -48,4 +90,11 @@ form {
 form > h2 {
   text-align: center;
   margin: 20px;
+  font-weight: bold;
+}
+
+ label {
+  display: block;
+  margin-left: 7px;
+  margin-bottom: -35px;
 }
