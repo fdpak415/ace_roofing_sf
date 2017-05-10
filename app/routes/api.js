@@ -1,75 +1,67 @@
 var Quote = require('../models/quote');
 var jwt = require('jsonwebtoken');
 var secret = 'harrypotter';
+var nodemailer = require('nodemailer');
+var xoauth2 = require('xoauth2');
+
 
 module.exports = function(router) {
-  //USER REGISTRATION ROUTE
+  //QUOTE REGISTRATION ROUTE
+
   router.post('/quote', function(req, res) {
     var quote = new Quote();
     quote.firstname = req.body.firstname;
     quote.lastname = req.body.lastname;
-    user.password = req.body.password;
-    user.email = req.body.email;
-    if (req.body.username == null || req.body.username == '' ||
-        req.body.email == null || req.body.email == '' ||
-        req.body.password == null || req.body.password == '') {
-        res.json({success: false, message: 'Ensure username, email, and password were provided'})
-    } else {
-      user.save(function(err) {
-        if (err) {
-          res.json({success: false, message: 'Username or Email already exists'});
-        } else {
-          res.json({success: true, message: "user created"});
-        }
-      });
-    }
-  });
+    quote.email = req.body.email;
+    quote.phone = req.body.phone;
+    quote.addres1 = req.body.addres1;
+    quote.addres2 = req.body.addres2;
+    quote.city = req.body.city;
+    quote.state = req.body.state;
+    quote.zip = req.body.zip;
+    quote.description = req.body.description;
 
-  //USER LOGIN ROUTE
-  //http://localhost:port8080/api/authenticate
-  router.post('/authenticate', function(req, res){
-    User.findOne({ username: req.body.username}).select('email username password').exec(function(err, user) {
-      if (err) throw err;
+    var data = req.body;
 
-      if (!user) {
-        res.json({ success: false, message: 'Could not authenticate user'})
-      } else if (user) {
-        if(req.body.password) {
-          var validPassword = user.comparePassword(req.body.password);
-        } else {
-          res.json({success: false, message: 'No password provided'})
-        }
-
-        if (!validPassword) {
-          res.json({ success: false, message: 'Could not authenticate password'});
-        } else {
-          var token = jwt.sign({ username: user.username, email: user.email }, secret, {expiresIn: '24h'});
-          res.json({ success: true, message: 'User authenticated', token: token});
-        }
+    var transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        xoauth2: xoauth2.createXOAuth2Generator({
+          user: 'aceroofingweb@gmail.com',
+          clientId: '223028785066-68t8o4pjposimq7s4tubud15o7ls3pva.apps.googleusercontent.com',
+          clientSecret: 'FaK0q1FkK10DrCy0jB-Y4CU3',
+          refreshToken: '1/kiY_9_SaV7JdGiCbtAgh02kqqxqaMM69rfGxBQDMOW8'
+        })
       }
     });
-  });
 
-  router.use(function(req, res, next) {
-    var token = req.body.token || req.body.query || req.header['x-access-token'];
-    if (token) {
-      //verify token
-      jwt.verify(token, secret, function(err, decoded){
-        if (err) {
-          res.json({ success: false, message: 'Token invalid'});
-        } else {
-          req.decoded = decoded;
-          next();
-        }
-      });
-    } else {
-      res.json({ success: false, message: 'No token provided'});
+    var mailOptions = {
+      from: req.body.email,
+      to: 'fpak210@gmail.com',
+      subject: 'Message from ' + req.body.firstname + req.body.lastname,
+      text: data.body
     }
-  });
 
-  router.post('/me', function(req, res) {
-    res.send(req.decoded);
+    if (req.body.firstname == null || req.body.firstname == '' ||
+        req.body.email == null || req.body.email == '' ||
+        req.body.description == null || req.body.description == '') {
+        res.json({success: false, message: 'Ensure name, email, and description were provided'})
+    } else {
+      quote.save(function(err) {
+        if (err) {
+          res.json({success: false, message: 'Please try again'});
+        } else {
+          res.json({success: true, message: "Thank you for your request! Our team is looking into it"})
+        };
+      });
+      transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(error);
+          } else {
+            console.log('email sent')
+          }
+      });
+    };
   });
-
   return router;
 }

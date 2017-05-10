@@ -1,6 +1,6 @@
 
-
-  <form ng-submit="regQuote(regData);" ng-controller="quoteCtrl" >
+  <form method="POST" action="http://formspree.io/aceroofingweb@gmail.com">
+    <input type="hidden" name="_next" value="http://localhost:8080/" />
   <!-- NAME -->
     <h2>Request a Free Quote</h2>
     <div class="input-group">
@@ -13,7 +13,7 @@
   <!-- EMAIL -->
   <div class="input-group">
     <label>Email:</label><br>
-    <input type="text" name="email" placeholder="example@gmail.com" ng-model="regData.email">
+    <input type="email" name="email" placeholder="example@gmail.com" ng-model="regData.email">
   </div>
   <br>
   <!-- PHONE -->
