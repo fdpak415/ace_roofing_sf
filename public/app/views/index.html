@@ -110,7 +110,7 @@
       <div id="services" ng-include="'app/views/pages/services.html'"></div>
 
       <div id="projects" ng-include="'app/views/pages/projects.html'"></div>
-
+      
       <div id="contact" class="page-header request-header">
         <h1>Contact Us</h1>
       </div>
@@ -153,12 +153,10 @@
   </body>
 
   <script>
-  $(document).ready(function() {
-     $(".nav a").on("click", function(){
-     $(".nav").find(".active").removeClass("active");
-     $(this).parent().addClass("active");
-  });
-  });</script>
+    $(function(){
+    $('#carouselExampleIndicators').carousel();
+    });
+  </script>
 
 
 
