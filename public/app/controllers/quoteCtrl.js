@@ -6,8 +6,9 @@ angular.module('quoteControllers', [])
     $http.post('/api/quote', this.regData)
     .success(() => {
       console.log('done');
+      console.log(this.regData)
     }).error(() => {
       console.log('error');
-    });
+    })
   }
 }]);
