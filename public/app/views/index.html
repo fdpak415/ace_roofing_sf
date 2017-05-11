@@ -123,7 +123,7 @@
             </div>
             <div class="col-xs-6">
               <div class="company-contact">
-                <h2>Address:</h2> <br>
+                <img src="app/assets/images/logo.png" id="contact-logo">
                   <p>1420 Yosemite Ave, <br>
                   San Francisco, CA 94124 <br>
                   (415) 407-2242</p>
@@ -153,12 +153,10 @@
   </body>
 
   <script>
-  $(document).ready(function() {
-     $(".nav a").on("click", function(){
-     $(".nav").find(".active").removeClass("active");
-     $(this).parent().addClass("active");
-  });
-  });</script>
+    $(function(){
+    $('#carouselExampleIndicators').carousel();
+    });
+  </script>
 
 
 
