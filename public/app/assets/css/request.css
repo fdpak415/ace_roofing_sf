@@ -16,12 +16,19 @@
 
 .company-contact p {
   font-size: 24px;
+  margin-top: 25px;
+  margin-bottom: -15px;
 }
 
 .company-contact h2 {
   text-align: center;
   margin-top: 40px;
   font-weight: bold;
+}
+
+#contact-logo {
+  width: 600px;
+  height: 200px;
 }
 
 #map {
@@ -84,7 +91,7 @@ form {
   float: left;
   width: 500px; !important;
   text-align: center;
-  background-color: #ccffcc;
+  background-color: #b3ffb3;
   padding: 20px;
 }
 
