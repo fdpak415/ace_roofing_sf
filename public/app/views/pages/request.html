@@ -2,7 +2,7 @@
   <form method="POST" action="http://formspree.io/aceroofingweb@gmail.com">
     <input type="hidden" name="_next" value="http://localhost:8080/" />
   <!-- NAME -->
-    <h2>Request a Free Quote</h2>
+    <h2 class="request-header">Request a Free Quote</h2>
     <div class="input-group">
       <label>Name:</label><br>
       <input id="input-name" name="firstname" type="text" class="form-name" placeholder="John" ng-model="regData.firstname">
@@ -34,7 +34,7 @@
   <!-- DESCRIPTION -->
   <div class="input-group">
     <label>Project Description:</label><br>
-    <textarea name="description" rows="8" cols="80" placeholder="Project Description" ng-model="regData.description"></textarea>
+    <textarea name="description" rows="8" cols="80" placeholder="What is the problem in Detail?   Roof Type?" ng-model="regData.description"></textarea>
   </div>
   <br>
   <!-- SUBMIT -->
