@@ -1,22 +1,30 @@
 .reviews-section {
-background-color: #b3ffb3;
+background: url(../images/house1_front.png) no-repeat fixed;
+background-size: cover;
+opacity: .9;
+height: 1000px;
 }
 
-.page-header h1 {
+.carousel-inner > .item > img {
+    margin: auto;
+    margin-top: 150px;
+}
+
+#review-header {
   font-size: 3.5em;
+  color: black;
 }
 
-.yelp-review {
-  margin: 0 auto;
-  display: none;
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 3em !important;
-}
-.yelp-review:last-of-type{
-  margin-bottom: 80px;
+.page-header {
+  font-size: 1.5em;
+
 }
 
-.u-horizontal-scrollbar:last-of-type{
+.yelp-button {
+  margin-left: 46%;
+}
 
+#yelp-biz-badge-rrc-I2i-L2bUi0yLWT31keqt_A {
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
 }

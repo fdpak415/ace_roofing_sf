@@ -12,13 +12,8 @@ font-family: 'Raleway', sans-serif;
 }
 
 /*---NAVBAR---*/
-.navbar-brand > img {
-  height: 50px;
-  width: 200px;
-  left: 15px;
-  bottom: 14.5px;
-  position: relative;
-}
+
+
 .navbar .nav {
     margin: 0;
     width: 80%;
@@ -48,21 +43,25 @@ font-family: 'Raleway', sans-serif;
     border-radius: 0 3px 3px 0;
 }
 
+.mr0 {
+margin-right: 0px !important;
+}
+
 /*---BACKGROUND---*/
 .jumbotron {
   height: 650px;
 }
 
 .parallax {
-  background: url(../images/roof.png) repeat fixed 100%;
-  background-size: cover;
+  background: url(../images/house1.png) no-repeat fixed 100%;
+  background-size: 100%;
   width: 100%;
-  height: 650px;
-  opacity: .5;
+  height: 870px;
+  opacity: ;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-filter: blur(5px);
-  filter: blur(3px);
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
 }
 
 #home-content {
@@ -72,20 +71,22 @@ font-family: 'Raleway', sans-serif;
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 3.5em;
   padding-top: 30px;
   padding-bottom: 40px;
 }
 
-h2 {
-  font-size: 2em;
-  margin: 5px;
-  padding: 10px;
+#home-content h2 {
+  font-size: 2.5em;
+  font-style: bold !important;
+  color: beige;
+  padding: 5px;
+
 }
 
 #logo {
-  width: 330px;
-  margin: auto;
+  width: 230px;
+  margin-top: -170px;
 }
 
 .call-message {
@@ -102,8 +103,10 @@ h2 {
 }
 
 .home-text {
-  margin: 100px;
+  margin: 150px;
   line-height: 48px;
+  height: 250px;
+  font-size: 2em;
 }
 
 .clearfix:after {

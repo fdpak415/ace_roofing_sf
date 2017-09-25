@@ -65,20 +65,16 @@
     <!-- Fixed navbar -->
     <nav id="custom-navbar" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <button type="button" class="navbar-toggle collapsed mr0" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
 
-
-          <a class="navbar-brand" href="#"><img src="app/assets/images/logo.png" alt=""></a>
-        </div>
-        <div id="navbar"  class="navbar-collapse collapse">
+        <div id="navbar"  class="navbar-collapse collapse mr0">
           <ul class="nav navbar-nav" >
-            <li class="active"><a  href="#/" du-smooth-scroll du-scrollspy>Home</a></li>
+            <li><a  href="#/" du-smooth-scroll du-scrollspy>Home</a></li>
 
             <li><a  href="#reviews" du-smooth-scroll du-scrollspy>Reviews</a></li>
 
@@ -95,16 +91,11 @@
     <div ng-view style="width:100%">
       <div id="/" ng-include="'app/views/pages/home.html'"></div>
 
-      <div class="reviews-section">
-        <div id="reviews" ng-include="'app/views/pages/reviews.html'"></div>
 
-        <span class="yelp-review" data-review-id="2Io2HZiyuULWDPQPe4S-Kw" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=HsBs3oVeR-Vzs0ULVH8Khg" rel="nofollow noopener">Royce B.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=2Io2HZiyuULWDPQPe4S-Kw" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+      <div id="reviews" ng-include="'app/views/pages/reviews.html'"></div>
 
-        <span class="yelp-review" data-review-id="LaLf2T55w2iyVYSnTYmbbA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=K1b8APNqrmIW9ebcsQbXyA" rel="nofollow noopener">Kaytee D.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=LaLf2T55w2iyVYSnTYmbbA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
-
-        <span class="yelp-review" data-review-id="fXQ82VxDOBdN-BPYpqK69A" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=aCYK-anx7FLsGhntkEoUPA" rel="nofollow noopener">jenn a.</a>'s <a href="https://www.yelp.com/biz/ace-roofing-san-francisco?hrid=fXQ82VxDOBdN-BPYpqK69A" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/I2i-L2bUi0yLWT31keqt_A" rel="nofollow noopener">Ace Roofing</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
-        <br>
-        <br>
+      <div class="yelp-button">
+        <div id="yelp-biz-badge-rrc-I2i-L2bUi0yLWT31keqt_A"><a href="http://yelp.com/biz/ace-roofing-san-francisco-5?utm_medium=badge_star_rating_reviews&amp;utm_source=biz_review_badge" target="_blank">Check out Ace Roofing on Yelp</a></div>    <script>(function(d, t) {var g = d.createElement(t);var s = d.getElementsByTagName(t)[0];g.id = "yelp-biz-badge-script-rrc-I2i-L2bUi0yLWT31keqt_A";g.src = "//yelp.com/biz_badge_js/en_US/rrc/I2i-L2bUi0yLWT31keqt_A.js";s.parentNode.insertBefore(g, s);}(document, 'script'));</script>
       </div>
 
       <div id="services" ng-include="'app/views/pages/services.html'"></div>
@@ -115,7 +106,7 @@
         <h1>Contact Us</h1>
       </div>
 
-      <div class="container-fluid">
+      <div id="contact-section" class="container-fluid">
         <div class="row">
           <div class="col-xs-12 col-centered">
             <div class="col-xs-6">
